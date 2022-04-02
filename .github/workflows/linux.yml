@@ -14,5 +14,8 @@ jobs:
       env: # Or as an environment variable
         EMAIL: ${{ secrets.EMAIL }}
       run: source script-linux.sh
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@master
+#    - name: Setup tmate session
+#      uses: mxschmitt/action-tmate@master
+#     - run: gh repo clone $GITHUB_REPOSITORY -- --depth 1
+    - uses: lhotari/action-upterm@v1
+
