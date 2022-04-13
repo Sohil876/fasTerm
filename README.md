@@ -16,6 +16,9 @@ SSH: ssh rXbusP3qkYsfALDSLMQZVwG3d@sfo2.tmate.io
 Use that to connect via ssh or web browser.
 After connecting you'll see a welcome message, press <kbd>q</kbd> or <kbd>Ctrl+c</kbd> to continue to shell.
 
+### Continue a workflow
+If you want to continue a workflow and you are inside a tmate session, just create a empty file with the name continue either in the root directory or in the project directory by running touch continue or sudo touch /continue.
+
 ### Stop your session
 Your workflow will run for ~6 hours.
 Your workflow will terminate when you exit your sshed shell.
