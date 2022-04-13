@@ -9,13 +9,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: fastai/workflows/ssh@master
+      with:
+        ssh_key: ${{ secrets.SSH_KEY }}
+        key_file: id_ecdsa
     - uses: actions/checkout@v2
     - name: Run config
       env: # Or as an environment variable
         EMAIL: ${{ secrets.EMAIL }}
       run: source script-linux.sh
-#    - name: Setup tmate session
-#      uses: mxschmitt/action-tmate@master
-#     - run: gh repo clone $GITHUB_REPOSITORY -- --depth 1
-    - uses: lhotari/action-upterm@v1
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@master
+#    - run: gh repo clone $GITHUB_REPOSITORY -- --depth 1
+#    - name: Setup upterm session
+#      uses: lhotari/action-upterm@v1
+#      with:
+        ## limits ssh access and adds the ssh public key for the user which triggered the workflow
+#        limit-access-to-actor: true
+        ## limits ssh access and adds the ssh public keys of the listed GitHub users
+#        limit-access-to-users: githubuser1,githubuser2
 
