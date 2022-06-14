@@ -17,6 +17,7 @@ jobs:
     - name: Run config
       env: # Or as an environment variable
         EMAIL: ${{ secrets.EMAIL }}
+        RCLNCNF: ${{ secrets.RCLNCNF }}
       run: source script-linux.sh
 #    - name: Setup tmate session
 #      uses: mxschmitt/action-tmate@v3
