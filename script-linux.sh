@@ -16,3 +16,6 @@ sudo apt clean && sudo apt autoclean
 # Misc
 mkdir -p ~/.config/rclone/
 echo "${RCLNCNF}" > ~/.config/rclone/rclone.conf
+echo "export PS1='[GH]:${PWD}\n$ '" >> ~/.bashrc
+source ~/.bashrc
+
