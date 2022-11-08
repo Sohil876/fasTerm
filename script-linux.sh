@@ -19,5 +19,10 @@ echo "${RCLNCNF}" > ~/.config/rclone/rclone.conf
 cat <<'EOF'>> ~/.bashrc
 export PS1='[GH]:${PWD}\n$ '
 EOF
+cat <<'EOF'>> ~/.bash_profile
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi
+EOF
 source ~/.bashrc
 
