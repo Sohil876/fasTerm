@@ -24,6 +24,12 @@ EOF
 chmod +x ~/.vnc/xstartup
 # ngrok
 sudo ngrok authtoken ${2}
+# Misc
+cat <<'EOF'>> ~/.bashrc
+export DISPLAY=:1.0
+EOF
+# Reload shell
+source ~/.bashrc
 
 # Start
 vncserver -localhost :1 -name vnc

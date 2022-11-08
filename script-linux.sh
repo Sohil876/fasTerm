@@ -24,5 +24,6 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 EOF
+# Reload shell
 source ~/.bashrc
 
