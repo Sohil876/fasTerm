@@ -9,7 +9,7 @@ git config --global user.name "${GITHUB_ACTOR}"
 git config --global user.email "${EMAIL}"
 
 # Apt
-#sudo apt update && sudo apt upgrade -y
+sudo apt update
 sudo apt install micro rclone
 sudo apt clean && sudo apt autoclean
 
