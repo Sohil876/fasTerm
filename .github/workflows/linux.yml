@@ -22,11 +22,6 @@ jobs:
 #    - name: Setup tmate session
 #      uses: mxschmitt/action-tmate@v3
 #    - run: gh repo clone $GITHUB_REPOSITORY -- --depth 1
-    - name: Setup JDK
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'adopt'
-        java-version: '17'
 
     - name: Setup upterm session
       uses: lhotari/action-upterm@v1
