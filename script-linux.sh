@@ -24,6 +24,10 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 EOF
+# Enabling scrolling in tmux 
+# Important note: This setting breaks highlighting and copying text. Use shift+click to maintain this functionality.
+# https://github.com/tmux/tmux/issues/145
+echo "set -g mouse on" >> ~/.tmux.conf #For tmux version 2.1 and up
 # Reload shell
 source ~/.bashrc
 
