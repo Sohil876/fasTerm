@@ -41,5 +41,5 @@ You can use this to auto install and setup your needed packages for example.
 `fasTerm` is a fork of [fastmac](https://github.com/jph00/fastmac)\
 `fastmac` is a very thin wrapper around [tmate](https://tmate.io/), which itself is based on [tmux](https://github.com/tmux/tmux/wiki), so all the features of both are available.\
 [tmate](https://tmate.io) integration with Github Actions is provided by [action-tmate](https://github.com/mxschmitt/action-tmate).\
-[Upterm](https://upterm.dev) integration with Github Actions is provided by [action-upterm](https://github.com/lhotari/action-upterm).
+[Upterm](https://upterm.dev) integration with Github Actions is provided by [action-upterm](https://github.com/owenthereal/action-upterm).
 

@@ -14,7 +14,7 @@ jobs:
         ssh_key: ${{ secrets.SSH_KEY }}
         key_file: id_ecdsa
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Run config
       env: # Or as an environment variable
@@ -26,7 +26,12 @@ jobs:
 #    - run: gh repo clone $GITHUB_REPOSITORY -- --depth 1
 
     - name: Setup upterm session
-      uses: lhotari/action-upterm@v1
+      uses: owenthereal/action-upterm@v1
+      #if: ${{ failure() }}
+      with:
+        limit-access-to-actor: true
+        ## Shut down the server if unconnected after 5 minutes.
+        #wait-timeout-minutes: 10
 #      with:
         ## limits ssh access and adds the ssh public key for the user which triggered the workflow
 #        limit-access-to-actor: true
